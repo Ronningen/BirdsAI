@@ -1,0 +1,63 @@
+﻿<Window x:Class="BirdsAI.SkyWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BirdsAI"
+        mc:Ignorable="d"
+		ShowInTaskbar="True"
+        Title="BirdsAI" Height="450" Width="700" ResizeMode="CanMinimize">
+
+	<Window.Resources>
+		<Style TargetType="TextBlock">
+			<Setter Property="FontSize" Value="20"/>
+			<Setter Property="Margin" Value="5 0 5 0"/>
+			<Setter Property="TextWrapping" Value="Wrap"/>
+		</Style>
+		<Style TargetType="Button">
+			<Setter Property="FontSize" Value="20"/>
+			<Setter Property="Margin" Value="1"/>
+			<Setter Property="Background" Value="LightCyan"/>
+			<Setter Property="Cursor" Value="Hand"/>
+		</Style>
+		<Style TargetType="Border">
+			<Setter Property="BorderThickness" Value="1"/>
+			<Setter Property="Margin" Value="1"/>
+			<Setter Property="BorderBrush" Value="Black"/>
+		</Style>
+	</Window.Resources>
+
+	<DockPanel>
+		<TextBlock Text="Sky:" DockPanel.Dock="Top"/>
+		<UniformGrid Rows="1" DockPanel.Dock="Bottom">
+			<Button Content="add bird" Command="{Binding AddBirdCommand}"/>
+			<Button Content="remove one bird" Command="{Binding RemoveBirdCommand}"/>
+		</UniformGrid>
+		<Border>
+			<Canvas x:Name="field" ClipToBounds="True">
+				<Canvas.Background>
+					<LinearGradientBrush StartPoint="0,0" EndPoint="1,0.8">
+						<GradientStop Offset="0" Color="#FFA6D6E6"/>
+						<GradientStop Offset="1" Color="#FFDAD8A2"/>
+					</LinearGradientBrush>
+				</Canvas.Background>
+
+				<Canvas.Resources>
+					<Style x:Key="coords">
+						<Setter Property="Canvas.Left" Value="{Binding X}"/>
+						<Setter Property="Canvas.Top" Value="{Binding Y}"/>
+					</Style>
+					<Style TargetType="local:BirdView" BasedOn="{StaticResource coords}"/>
+					<Style TargetType="Path" BasedOn="{StaticResource coords}"/>
+				</Canvas.Resources>
+
+				<local:Cloud Canvas.Top="30"/>
+				<local:Cloud Canvas.Top="70"/>
+				<local:Cloud Canvas.Top="120"/>
+				<local:Cloud Canvas.Top="190"/>
+				<local:Cloud Canvas.Top="250"/>
+				<local:Cloud Canvas.Top="300"/>
+			</Canvas>
+		</Border>
+	</DockPanel>
+</Window>
