@@ -27,7 +27,7 @@ namespace BirdsAI
 			AddBirdCommand = new CommonCommand(
 				(o) =>
 				{
-					Bird newbie = new Bird(70, 70);
+					Bird newbie = new Bird(90 + r.Next(-20, 20), 90 + r.Next(-20, -20)) { Direction = r.Next(90)};
 
 					field.Children.Add(new BirdView(newbie));
 					sky.Birds.Add(newbie);
