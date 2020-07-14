@@ -6,7 +6,6 @@ namespace BirdsAI
 	public class Bird : CoordinatesHolder
 	{
 		public BirdView view;
-		public RayCast rayCast;
 
 		private double direction;
 		public double Direction
@@ -14,7 +13,7 @@ namespace BirdsAI
 			get => direction;
 			set
 			{
-				direction = value % 360;
+				direction = value;
 				RaisePropertyChanged();
 			}
 		}
@@ -28,7 +27,6 @@ namespace BirdsAI
 		{
 			X = x;
 			Y = y;
-			rayCast = new RayCast(this);
 		}
 
 		public void Fly()

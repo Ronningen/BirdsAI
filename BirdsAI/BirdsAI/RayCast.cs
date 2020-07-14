@@ -8,16 +8,21 @@ namespace BirdsAI
 {
 	public class RayCast : IEnumerable
 	{
-		private double Direction { get; set; }
+		private double direction;
 
-		public RayCast(Bird bird)
+		private RayCast(double d)
 		{
-			Direction = bird.RadDirection;
+			direction = d;
+		}
+
+		public static RayCast Get(Bird bird)
+		{
+			return new RayCast(bird.RadDirection);
 		}
 
 		public IEnumerator GetEnumerator()
 		{
-			for (double angle = Direction - FOV / 2; angle <= Direction + FOV / 2; angle += FOV / (raysCount - 1))
+			for (double angle = direction - FOV / 2; angle <= direction + FOV / 2; angle += FOV / (raysCount - 1))
 			{
 				Point end = new Point(observeDistance * Cos(angle), observeDistance * Sin(angle));
 				yield return new Ray()
@@ -30,7 +35,6 @@ namespace BirdsAI
 							new PathSegment[]
 							{
 								new LineSegment(end, false),
-								new LineSegment(new Point(end.X, end.Y + 1), false),
 								new LineSegment(new Point(Cos(angle + PI / 2), Sin(angle + PI / 2)), false)
 							}, true)
 						})

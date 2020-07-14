@@ -19,15 +19,15 @@ namespace BirdsAI
 			{
 				if (o is Bird bird)
 					birds.Add(bird);
-				if (o is Shape wall)
-					walls.Add(new Wall(wall.RenderedGeometry, Canvas.GetLeft(wall), Canvas.GetTop(wall)));
+				if (o is Path wall)
+					walls.Add(new Wall(wall.Data, Canvas.GetLeft(wall), Canvas.GetTop(wall)));
 			}
 			Sky sky = new Sky(birds, walls);
 
 			AddBirdCommand = new CommonCommand(
 				(o) =>
 				{
-					Bird newbie = new Bird(field.ActualWidth / 2 + r.Next(-spread, spread) / 2, field.ActualHeight / 2 + r.Next(-spread, spread) / 2);
+					Bird newbie = new Bird(70, 70);
 
 					field.Children.Add(new BirdView(newbie));
 					sky.Birds.Add(newbie);

@@ -38,7 +38,7 @@ namespace BirdsAI
 		private void OrientBird(Bird bird)
 		{
 			double direction = 2 * PI, maxDistance = 0;
-			foreach (Ray ray in bird.rayCast)
+			foreach (Ray ray in RayCast.Get(bird))
 			{
 				IEnumerable<double> w = Walls.Select((wall) =>
 				{
@@ -53,15 +53,16 @@ namespace BirdsAI
 				if (w.Count() <= 0)
 					return;
 				double distance = w.Min();
-				if (distance == maxDistance && Abs(ray.Direction) < Abs(direction))
-					direction = ray.Direction;
-				else if (distance > maxDistance)
+				if (distance > maxDistance)
 				{
 					maxDistance = distance;
 					direction = ray.Direction;
 				}
 			}
-			bird.RadDirection = direction;
+			if (maxDistance > rotateTriggerDistance)
+				bird.RadDirection = direction;
+			else
+				bird.Direction += 5;
 		}
 	}
 }

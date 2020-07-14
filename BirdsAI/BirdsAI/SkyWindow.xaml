@@ -48,7 +48,9 @@
 						<Setter Property="Canvas.Top" Value="{Binding Y}"/>
 					</Style>
 					<Style TargetType="local:BirdView" BasedOn="{StaticResource coords}"/>
-					<Style TargetType="Path" BasedOn="{StaticResource coords}"/>
+					<Style TargetType="Path">
+						<Setter Property="Fill" Value="#FF87AC7F"/>
+					</Style>
 				</Canvas.Resources>
 
 				<local:Cloud Canvas.Top="30"/>
@@ -57,6 +59,239 @@
 				<local:Cloud Canvas.Top="190"/>
 				<local:Cloud Canvas.Top="250"/>
 				<local:Cloud Canvas.Top="300"/>
+
+				<Path Canvas.Top="-2" Canvas.Left="0">
+					<Path.Data>
+						<RectangleGeometry>
+							<RectangleGeometry.Rect>
+								<Rect Height="2" Width="690"/>
+							</RectangleGeometry.Rect>
+						</RectangleGeometry>
+					</Path.Data>
+				</Path>
+				<Path Canvas.Top="358" Canvas.Left="0">
+					<Path.Data>
+						<RectangleGeometry>
+							<RectangleGeometry.Rect>
+								<Rect Height="2" Width="700"/>
+							</RectangleGeometry.Rect>
+						</RectangleGeometry>
+					</Path.Data>
+				</Path>
+				<Path Canvas.Top="0" Canvas.Left="-2">
+					<Path.Data>
+						<RectangleGeometry>
+							<RectangleGeometry.Rect>
+								<Rect Height="358" Width="2"/>
+							</RectangleGeometry.Rect>
+						</RectangleGeometry>
+					</Path.Data>
+				</Path>
+				<Path Canvas.Top="0" Canvas.Left="690">
+					<Path.Data>
+						<RectangleGeometry>
+							<RectangleGeometry.Rect>
+								<Rect Height="358" Width="2"/>
+							</RectangleGeometry.Rect>
+						</RectangleGeometry>
+					</Path.Data>
+				</Path>
+				<Path Canvas.Top="101.902" Canvas.Left="196.175">
+					<Path.RenderTransform>
+						<TransformGroup>
+							<RotateTransform Angle="0"/>
+						</TransformGroup>
+					</Path.RenderTransform>
+					<Path.Data>
+						<RectangleGeometry>
+							<RectangleGeometry.Rect>
+								<Rect Height="150" Width="300"/>
+							</RectangleGeometry.Rect>
+						</RectangleGeometry>
+					</Path.Data>
+				</Path>
+				<Path Canvas.Top="32" Canvas.Left="30">
+					<Path.RenderTransform>
+						<TransformGroup>
+							<RotateTransform Angle="0"/>
+						</TransformGroup>
+					</Path.RenderTransform>
+					<Path.Data>
+						<RectangleGeometry>
+							<RectangleGeometry.Rect>
+								<Rect Height="30" Width="30"/>
+							</RectangleGeometry.Rect>
+						</RectangleGeometry>
+					</Path.Data>
+				</Path>
+				<Path Canvas.Top="212" Canvas.Left="100">
+					<Path.RenderTransform>
+						<TransformGroup>
+							<RotateTransform Angle="0"/>
+						</TransformGroup>
+					</Path.RenderTransform>
+					<Path.Data>
+						<RectangleGeometry>
+							<RectangleGeometry.Rect>
+								<Rect Height="30" Width="30"/>
+							</RectangleGeometry.Rect>
+						</RectangleGeometry>
+					</Path.Data>
+				</Path>
+				<Path Canvas.Top="40" Canvas.Left="422">
+					<Path.RenderTransform>
+						<TransformGroup>
+							<RotateTransform Angle="0"/>
+						</TransformGroup>
+					</Path.RenderTransform>
+					<Path.Data>
+						<RectangleGeometry>
+							<RectangleGeometry.Rect>
+								<Rect Height="30" Width="30"/>
+							</RectangleGeometry.Rect>
+						</RectangleGeometry>
+					</Path.Data>
+				</Path>
+				<Path Canvas.Top="286" Canvas.Left="116">
+					<Path.RenderTransform>
+						<TransformGroup>
+							<RotateTransform Angle="0"/>
+						</TransformGroup>
+					</Path.RenderTransform>
+					<Path.Data>
+						<RectangleGeometry>
+							<RectangleGeometry.Rect>
+								<Rect Height="30" Width="30"/>
+							</RectangleGeometry.Rect>
+						</RectangleGeometry>
+					</Path.Data>
+				</Path>
+				<Path Canvas.Top="24" Canvas.Left="192">
+					<Path.RenderTransform>
+						<TransformGroup>
+							<RotateTransform Angle="0"/>
+						</TransformGroup>
+					</Path.RenderTransform>
+					<Path.Data>
+						<RectangleGeometry>
+							<RectangleGeometry.Rect>
+								<Rect Height="30" Width="30"/>
+							</RectangleGeometry.Rect>
+						</RectangleGeometry>
+					</Path.Data>
+				</Path>
+				<Path Canvas.Top="304" Canvas.Left="20">
+					<Path.RenderTransform>
+						<TransformGroup>
+							<RotateTransform Angle="0"/>
+						</TransformGroup>
+					</Path.RenderTransform>
+					<Path.Data>
+						<RectangleGeometry>
+							<RectangleGeometry.Rect>
+								<Rect Height="30" Width="30"/>
+							</RectangleGeometry.Rect>
+						</RectangleGeometry>
+					</Path.Data>
+				</Path>
+				<Path Canvas.Top="308" Canvas.Left="252">
+					<Path.RenderTransform>
+						<TransformGroup>
+							<RotateTransform Angle="0"/>
+						</TransformGroup>
+					</Path.RenderTransform>
+					<Path.Data>
+						<RectangleGeometry>
+							<RectangleGeometry.Rect>
+								<Rect Height="30" Width="30"/>
+							</RectangleGeometry.Rect>
+						</RectangleGeometry>
+					</Path.Data>
+				</Path>
+				<Path Canvas.Top="28" Canvas.Left="628">
+					<Path.RenderTransform>
+						<TransformGroup>
+							<RotateTransform Angle="0"/>
+						</TransformGroup>
+					</Path.RenderTransform>
+					<Path.Data>
+						<RectangleGeometry>
+							<RectangleGeometry.Rect>
+								<Rect Height="30" Width="30"/>
+							</RectangleGeometry.Rect>
+						</RectangleGeometry>
+					</Path.Data>
+				</Path>
+				<Path Canvas.Top="326" Canvas.Left="656">
+					<Path.RenderTransform>
+						<TransformGroup>
+							<RotateTransform Angle="0"/>
+						</TransformGroup>
+					</Path.RenderTransform>
+					<Path.Data>
+						<RectangleGeometry>
+							<RectangleGeometry.Rect>
+								<Rect Height="30" Width="30"/>
+							</RectangleGeometry.Rect>
+						</RectangleGeometry>
+					</Path.Data>
+				</Path>
+				<Path Canvas.Top="132" Canvas.Left="574">
+					<Path.RenderTransform>
+						<TransformGroup>
+							<RotateTransform Angle="0"/>
+						</TransformGroup>
+					</Path.RenderTransform>
+					<Path.Data>
+						<RectangleGeometry>
+							<RectangleGeometry.Rect>
+								<Rect Height="30" Width="30"/>
+							</RectangleGeometry.Rect>
+						</RectangleGeometry>
+					</Path.Data>
+				</Path>
+				<Path Canvas.Top="308" Canvas.Left="428">
+					<Path.RenderTransform>
+						<TransformGroup>
+							<RotateTransform Angle="0"/>
+						</TransformGroup>
+					</Path.RenderTransform>
+					<Path.Data>
+						<RectangleGeometry>
+							<RectangleGeometry.Rect>
+								<Rect Height="30" Width="30"/>
+							</RectangleGeometry.Rect>
+						</RectangleGeometry>
+					</Path.Data>
+				</Path>
+				<Path Canvas.Top="244" Canvas.Left="538">
+					<Path.RenderTransform>
+						<TransformGroup>
+							<RotateTransform Angle="0"/>
+						</TransformGroup>
+					</Path.RenderTransform>
+					<Path.Data>
+						<RectangleGeometry>
+							<RectangleGeometry.Rect>
+								<Rect Height="30" Width="30"/>
+							</RectangleGeometry.Rect>
+						</RectangleGeometry>
+					</Path.Data>
+				</Path>
+				<Path Canvas.Top="138" Canvas.Left="32">
+					<Path.RenderTransform>
+						<TransformGroup>
+							<RotateTransform Angle="0"/>
+						</TransformGroup>
+					</Path.RenderTransform>
+					<Path.Data>
+						<RectangleGeometry>
+							<RectangleGeometry.Rect>
+								<Rect Height="30" Width="30"/>
+							</RectangleGeometry.Rect>
+						</RectangleGeometry>
+					</Path.Data>
+				</Path>
 			</Canvas>
 		</Border>
 	</DockPanel>
